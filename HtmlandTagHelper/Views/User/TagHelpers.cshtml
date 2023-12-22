@@ -1,0 +1,59 @@
+﻿@model Userr
+
+@{
+    ViewData["Title"] = "TagHelpers";
+
+}
+
+<div class="row justify-content-center" style="margin-top:50px"
+
+<div class="col-lg-8">
+    <div class="card">
+
+        <div class="card-header">
+            <h3>Tag Helper Sayfası</h3>
+
+
+        </div>
+        <div class="card-body">
+
+            <form asp-action="TagHelpers" asp-asp-controller="User" method="post">
+                <div class="form-group">
+                    <label asp-formaction="UserName">Kullanıcı Adı : </label>
+                    <input type="text" class="form-control" asp-for="UserName"/>
+
+
+                </div>
+                 <div class="form-group">
+                    <label asp-formaction="Password">Password : </label>
+                    <input type="text" class="form-control" asp-for="Password"/>
+
+
+                </div>
+                <button type="submit" class="btn btn-secondary btn-block">Giriş Yap</button>
+
+            </form>
+
+
+        </div>
+        <div class="card-footer">
+
+            <h5>&copy; Contoso Inc.</h5>
+
+        
+
+        </div>
+
+
+    </div>
+
+
+
+</div>
+
+
+
+
+
+></div>
+

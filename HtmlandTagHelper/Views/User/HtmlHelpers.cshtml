@@ -1,0 +1,61 @@
+﻿@model Userr
+@{
+
+
+    ViewData["Title"] = "HtlmlHelpers";
+
+}
+<div class="row justify-content-center" style="margin-top:50px;">
+
+    <div class="col-lg-4">
+        <div class="card">
+            <div class="caard-header">
+                <h3>HTML HELPER SAYFASI</h3>
+                <div class="card-body">
+
+
+                    @using (Html.BeginForm("HtmlHelpers", "Userr", FormMethod.Post))
+                    {
+                        <div class="form-group">
+                            <label for="UserName">Kullanıcı Adı : </label>
+
+                            @*  <input type="text" class="form-control" name="UserName"> *@
+                            @Html.TextBoxFor(u=>u.UserName, new{@class="form-control"})
+                        </div>
+                        <div class="form-group">
+                            <label for="Password">Parola : </label>
+                            @*  <input type="password" class="form-control" name="Password"> *@
+
+                            @Html.PasswordFor(u=>u.Password, new{@class="form-control"})
+
+                        </div>
+                        <div class="form-group">
+                            <label for="Password">CheckBox</label>
+                            @Html.CheckBox("Beni Hatırla")
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block">Giriş Yap</button>
+                    }
+                </div>
+
+
+
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Giriş Yap</button>
+            
+        </div>
+                <div class="form-group">
+
+                    @Html.ActionLink("Şifremi Unuttum","ForgoatPassword","User")
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
